@@ -48,7 +48,7 @@ function App() {
       <Sidebar />
       <div className="main-content">
         <header>
-          <h1>Cybersecurity Dashboard</h1>
+          <h1>VoIP Trace</h1>
           <div className="stats">
             <div className="stat">
               <h3>42 Active Tasks</h3>
