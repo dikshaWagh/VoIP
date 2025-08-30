@@ -1,36 +1,4 @@
-// import React from "react";
-// import { Table, TableBody, TableCell, TableHead, TableRow, Paper } from "@mui/material";
 
-// const CallLogs = ({ calls }) => {
-//   return (
-//     <Paper style={{ padding: "1rem", marginBottom: "1rem" }}>
-//       <h2>Call Logs</h2>
-//       <Table>
-//         <TableHead>
-//           <TableRow>
-//             <TableCell>Caller</TableCell>
-//             <TableCell>Callee</TableCell>
-//             <TableCell>Duration (s)</TableCell>
-//           </TableRow>
-//         </TableHead>
-//         <TableBody>
-//           {calls.map((call, i) => (
-//             <TableRow key={i}>
-//               <TableCell>{call.caller}</TableCell>
-//               <TableCell>{call.callee}</TableCell>
-//               <TableCell>{call.duration}</TableCell>
-//             </TableRow>
-//           ))}
-//         </TableBody>
-//       </Table>
-//     </Paper>
-//   );
-// };
-
-// export default CallLogs;
-
-
-// src/components/CallLogs.jsx
 import React from "react";
 import "../App.css";
 
