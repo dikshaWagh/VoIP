@@ -1,4 +1,4 @@
-import React from "react";
+import React , { useRef } from "react";
 import CallLogs from "./components/CallLogs";
 import Charts from "./components/Charts";
 import Alerts from "./components/Alerts";
@@ -45,6 +45,17 @@ function App() {
     "Caller 1001 made 10 failed attempts",
     "High jitter detected in call 1003",
   ];
+  const callLog = useRef(null);
+  const alertsRef = useRef(null);
+
+  const scrollToCharts = () => {
+    callLog.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToAlerts = () => {
+    alertsRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+  
 
   return (
     <div className="app-container">

@@ -28,8 +28,10 @@ const CallFlowDiagram = () => {
     <div className="gridBox" 
     style={{
       border: "1px solid #0ff",
-  boxShadow: "0 0 20px rgba(0, 255, 255, 0.2)",
-  background: "rgba(6, 6, 6, 0.9);  margin-top: 10px"
+      background: "rgba(6, 6, 6, 0.9)",
+      marginBottom: "100px",
+      overflow: "hidden"
+
     }}>
       <h2 className="gridTitle">CALL FLOW DIAGRAM</h2>
       <div className="mermaid diagramBox" ref={diagramRef}>

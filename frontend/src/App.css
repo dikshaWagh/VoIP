@@ -12,11 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  font-family: 'Arial', sans-serif;
-  color: #fff;
-}
-
 .app-container {
   display: flex;
   height: 100vh;
@@ -36,31 +31,6 @@ h1, h2, h3 {
   max-width: calc(100% -150px);
 }
 
-
-.sidebar {
-  width: 250px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #1f1f1f; 
-  color: #fff;
-  padding: 20px;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar h2 {
-  font-size: 24px;
-  color: #00BFFF; 
-  text-transform: uppercase;
-  font-family: 'Orbitron', sans-serif;
-  text-align: center;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-}
 
 
 .sidebar nav ul {
@@ -131,26 +101,7 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
-
-.grids {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Ensure components are smaller */
-  gap: 20px;
-  margin-top: 20px;
-  justify-content: center;
-  align-items: center;  /* Align grid items vertically */
-}
-
-/* Styling for the Grid Box of individual components */
-.gridBox {
-  /* background-color: #2a2a2a; */
-  border-radius: 8px;
-  padding: 20px;
-  min-height: 250px;  /* Adjust the height */
-  max-height: 300px;  /* Set maximum height */
-  width: 100%;
-  overflow: hidden;
+  font-weight: 100;
 }
 
 /* Ensure that charts fit nicely */
@@ -166,7 +117,6 @@ h1, h2, h3 {
 
 /* Styling for CallLogs */
 .call-logs {
-  /* background-color: #1e1e1e; */
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -238,17 +188,7 @@ h1, h2, h3 {
   content: "⚠️ ";
 }
 
-/* Adjusting Graph View Container */
-.graph-view-container {
-  /* background-color: #333; */
-  padding: 15px;
-  border-radius: 8px;
-border: 1px solid #0ff;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-  background: rgba(6, 6, 6, 0.9);  margin-top: 10px;
-  max-height: 250px;
-  overflow: hidden;
-}
+
 
 /* Responsiveness */
 @media screen and (max-width: 768px) {
@@ -314,59 +254,6 @@ button:hover {
 }
 
 
-.call-logs {
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  max-width: 100%;
-}
-
-.call-logs h2 {
-  color: #fff;
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif;
-}
-
-
-.call-logs-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.call-logs-table th,
-.call-logs-table td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #444;
-  color: #bbb;
-  font-size: 16px;
-}
-
-.call-logs-table th {
-  background-color: #333; 
-  font-weight: 600;
-}
-
-.call-logs-table tr:nth-child(even) {
-  background-color: #222; 
-}
-
-.call-logs-table tr:hover {
-  background-color: #444; 
-}
-
-.call-logs-table tr td {
-  color: #bbb; 
-}
-
-.call-logs-table tr td:hover {
-  color: #fff;
-}
-
 
 .add-expense-btn {
   background-color: #00BFFF; 
@@ -424,9 +311,10 @@ border: 1px solid #0ff;
 .graph-view-box {
   width: 100%;
   height: 300px;
-  background: linear-gradient(135deg, #1e1e1e 0%, #2c2c2c 100%);
+  /* background: linear-gradient(135deg, #1e1e1e 0%, #2c2c2c 100%); */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
 }
 
 
@@ -439,6 +327,8 @@ border: 1px solid #0ff;
   width: 100%;
   max-width: 100%;
   margin-top: 20px;
+  width: 100%;
+  height: 500px;
 }
 
 .alerts h2 {
@@ -829,13 +719,14 @@ header h1 {
 }
 
 .stat h3 {
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: 300;
   margin-bottom: 10px;
-  color: #00BFFF;
+  color: #e8e9ea;
 }
 
 .stat button {
-  background: #00BFFF;
+  background: #c9e4f8;
   color: #111;
   border: none;
   padding: 8px 14px;
@@ -871,7 +762,6 @@ header h1 {
 
 .gridBox:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(0,255,128,0.2);
 }
 
 .gridBox h2 {
@@ -884,7 +774,6 @@ header h1 {
   font-family: 'Orbitron', sans-serif;
   align-items: center;
 
-  /* text-shadow: 0 0 5px #363636, 0 0 10px #f0e8f4, 0 0 20px #e3dde5; */
 
 }
 
@@ -921,11 +810,11 @@ header h1 {
 
 /* ==== ALERTS ==== */
 .alerts {
-  max-height: 250px;
+  max-height: 405px;
   overflow-y: auto;
   border: 1px solid #0ff;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-    background: rgba(6, 6, 6, 0.9);
+  background: rgba(6, 6, 6, 0.9);
 
 
 
@@ -1078,6 +967,7 @@ header h1 {
 
 .grids{
   box-shadow: none;
+  background-color: transparent;
 }
 
 /* Container styling for map card */
@@ -1135,4 +1025,51 @@ header h1 {
   transform: scale(1.2);
   transition: 0.3s ease;
   filter: drop-shadow(0px 0px 8px #00f5ff);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cyber Security Themed Search Bar */
+.search-input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #00ff9f; /* neon green */
+  background: #0d0d0d; /* dark hacker background */
+  border: 2px solid #529bfc;
+  border-radius: 8px;
+  outline: none;
+  font-family: "Courier New", monospace;
+}
+
+.search-input::placeholder {
+  color: #add4f499; /* slightly faded neon */
+  font-style: italic;
+}
+
+.search-input:focus {
+  border-color: #00ffff; /* cyan glow on focus */
+  background: #1a1a1a;
+}
+
+
+.search-input:focus {
+  animation: neon-glow 1.5s infinite alternate;
 }
