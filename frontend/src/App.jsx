@@ -45,15 +45,12 @@ function App() {
     "Caller 1001 made 10 failed attempts",
     "High jitter detected in call 1003",
   ];
-  const callLog = useRef(null);
-  const alertsRef = useRef(null);
+  const tasksRef = useRef(null);
+  const reviewsRef = useRef(null);
+  const completedRef = useRef(null);
 
-  const scrollToCharts = () => {
-    callLog.current.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToAlerts = () => {
-    alertsRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
   };
   
 
@@ -66,26 +63,27 @@ function App() {
           <div className="stats">
             <div className="stat">
               <h3>42 Active Tasks</h3>
-              <button>View details</button>
+              <button onClick={() => scrollToSection(tasksRef)}>View details</button>
             </div>
             <div className="stat">
               <h3>21 Client Reviews</h3>
-              <button>View details</button>
+              <button onClick={() => scrollToSection(reviewsRef)}>View details</button>
             </div>
             <div className="stat">
               <h3>68 Completed Tasks</h3>
-              <button>View details</button>
+              <button onClick={() => scrollToSection(completedRef)}>View details</button>
             </div>
           </div>
         </header>
+         <div className="callLogs" ref={tasksRef}> <CallLogs calls={calls} /></div>
+
 
         <div className="grids">
-          <div className="gridBox"><Charts stats={stats} /></div>
+          <div className="gridBox" ref={reviewsRef}><Charts stats={stats} /></div>
           <div className="gridBox"><GraphView calls={calls} /></div>
           <div className="gridBox"><CallFlowDiagram calls={calls} /></div>
-          <div className="gridBox"><Alerts calls={alerts} /></div>
+          <div className="gridBox" ref={completedRef}><Alerts calls={alerts} /></div>
         </div>  
-        <div className="callLogs"> <CallLogs calls={calls} /></div>
       </div>
       {/* <Routes>
           <Route path='/InternationalCalls' element={<InternationalCallsMap/>} />

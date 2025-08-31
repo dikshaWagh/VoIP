@@ -743,7 +743,7 @@ header h1 {
 /* ==== GRID LAYOUT ==== */
 .grids {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
   gap: 25px;
   margin-top: 20px;
 }
@@ -756,6 +756,8 @@ header h1 {
   /* border: 1px solid rgba(0,255,128,0.15); */
   /* box-shadow: 0 6px 18px rgba(0,255,128,0.1); */
   transition: all 0.3s ease;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+
 
 
 }
@@ -780,10 +782,10 @@ header h1 {
 /* ==== CALL LOGS ==== */
 .call-logs {
   margin-top: 25px;
-  background: rgba(28,28,28,0.95);
+  /* background: rgba(28,28,28,0.95); */
   border-radius: 12px;
   padding: 20px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgb(36, 37, 37);
 }
 
 .call-logs-table {
@@ -968,6 +970,7 @@ header h1 {
 .grids{
   box-shadow: none;
   background-color: transparent;
+
 }
 
 /* Container styling for map card */
@@ -1028,33 +1031,15 @@ header h1 {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Cyber Security Themed Search Bar */
 .search-input {
-  width: 100%;
+  width: 60%;
   padding: 10px 15px;
   font-size: 16px;
-  color: #00ff9f; /* neon green */
+  color: #00f5ff; /* neon green */
   background: #0d0d0d; /* dark hacker background */
-  border: 2px solid #529bfc;
-  border-radius: 8px;
+  border: 1px solid #ededf1;
+  border-radius: 2px;
   outline: none;
   font-family: "Courier New", monospace;
 }
