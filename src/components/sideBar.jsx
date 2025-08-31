@@ -1,6 +1,9 @@
 // src/components/Sidebar.jsx
 import { useState } from "react";
 import { BarChart2, Network, List } from "lucide-react";
+// import { Link } from 'react-router-dom'
+// import InternationalCallsMap from "./InterCall";
+
 import '../App.css';
 
 export default function Sidebar({ onSelect }) {
@@ -32,6 +35,8 @@ export default function Sidebar({ onSelect }) {
               <span>{item.label}</span>
             </li>
           ))}
+         {/* <Link to='/InternationalCalls' className="navlinks">International Call Trace</Link> */}
+
         </ul>
       </nav>
     </div>

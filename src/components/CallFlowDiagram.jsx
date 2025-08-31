@@ -6,9 +6,9 @@ const CallFlowDiagram = () => {
   const diagramRef = useRef(null);
 
   useEffect(() => {
-    mermaid.initialize({ startOnLoad: true });
+    mermaid.initialize({ startOnLoad: true, theme: "dark" }); // dark theme to match dashboard
     if (diagramRef.current) {
-      mermaid.contentLoaded(); // Render diagram
+      mermaid.contentLoaded();
     }
   }, []);
 
@@ -25,9 +25,14 @@ const CallFlowDiagram = () => {
   `;
 
   return (
-    <div>
-      <h2>Call Flow Diagram</h2>
-      <div className="mermaid" ref={diagramRef}>
+    <div className="gridBox" 
+    style={{
+      border: "1px solid #0ff",
+  boxShadow: "0 0 20px rgba(0, 255, 255, 0.2)",
+  background: "rgba(6, 6, 6, 0.9);  margin-top: 10px"
+    }}>
+      <h2 className="gridTitle">CALL FLOW DIAGRAM</h2>
+      <div className="mermaid diagramBox" ref={diagramRef}>
         {diagram}
       </div>
     </div>

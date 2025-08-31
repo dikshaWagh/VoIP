@@ -92,7 +92,8 @@ const GraphView = ({ calls }) => {
   }, [calls]);
 
   return (
-    <div>
+    <div 
+    className="graph-view-container">
       <h2 style={{ fontSize: "20px", fontWeight: "600", marginBottom: "10px" }}>
         Graph View
       </h2>

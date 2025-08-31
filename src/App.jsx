@@ -5,6 +5,9 @@ import Alerts from "./components/Alerts";
 import CallFlowDiagram from "./components/CallFlowDiagram";
 import GraphView from "./components/graphView";
 import Sidebar from "./components/sideBar";
+// import InternationalCallsMap from "./components/InterCall";
+// import { Routes, Route } from 'react-router-dom'
+
 import './App.css';
 
 function App() {
@@ -73,6 +76,9 @@ function App() {
         </div>  
         <div className="callLogs"> <CallLogs calls={calls} /></div>
       </div>
+      {/* <Routes>
+          <Route path='/InternationalCalls' element={<InternationalCallsMap/>} />
+        </Routes> */}
     </div>
   );
 }
