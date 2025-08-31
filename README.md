@@ -19,7 +19,7 @@
 
 This project uses a client-server architecture to provide real-time VoIP monitoring and analysis.
 
-### 🐍 Backend (The Brains)
+### 🐍 Backend 
 
 1.  **Packet Sniffing:** A high-performance Python sniffer, built with Scapy, continuously captures network traffic. It's laser-focused on VoIP protocols, primarily **SIP** (for call signaling) and **RTP** (for the actual voice data).
 2.  **Data Extraction & Analysis:** As packets are captured, the backend service intelligently parses them:
@@ -28,7 +28,7 @@ This project uses a client-server architecture to provide real-time VoIP monitor
 3.  **Data Storage:** All this valuable information is persisted in a database, creating a historical log of every call for later analysis and review.
 4.  **API Layer:** A robust **FastAPI** server exposes the data through a RESTful API, making it available for the frontend to consume.
 
-### ⚛️ Frontend (The Beauty)
+### ⚛️ Frontend 
 
 1.  **Data Visualization:** A modern single-page application (SPA) built with **React** serves as the user's dashboard.
 2.  **Real-time Updates:** The frontend communicates with the backend API to fetch and display data, providing:
