@@ -1058,3 +1058,19 @@ header h1 {
 .search-input:focus {
   animation: neon-glow 1.5s infinite alternate;
 }
+
+
+.call-logs table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.call-logs th, .call-logs td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.call-logs th {
+  background-color: #111111;
+}
