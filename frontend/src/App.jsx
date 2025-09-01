@@ -5,6 +5,7 @@ import Alerts from "./components/Alerts";
 import CallFlowDiagram from "./components/CallFlowDiagram";
 import GraphView from "./components/graphView";
 import Sidebar from "./components/sideBar";
+import RtpPackets from "./components/RtpPackets";
 
 import "./App.css";
 
@@ -105,6 +106,11 @@ function App() {
             <CallLogs calls={calls} />
           </div>
         )}
+
+        {/* RTP Packets */}
+        <div className="rtp-packets">
+          <RtpPackets />
+        </div>
 
         {/* Other widgets */}
         <div className="grids">

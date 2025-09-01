@@ -134,9 +134,15 @@ class Sniffer:
         logging.info("Packet sniffer started.")
 
     def _sniff_loop(self):
+        # test_interface = "\\Device\\NPF_Loopback"  
+        # logging.info(f"Sniffer starting on interface: {test_interface}")
         while not self.stop_sniffing.is_set():
-            sniff(prn=self.process_packet, stop_filter=lambda p: self.stop_sniffing.is_set(), store=False,timeout=1)
-
+            sniff(
+                prn=self.process_packet, 
+                stop_filter=lambda p: self.stop_sniffing.is_set(), 
+                store=False,
+                timeout=1
+            )
     def stop(self):
         if self.thread is None or not self.thread.is_alive():
             logging.warning("Sniffer is not running.")
