@@ -17,7 +17,13 @@
 
 ## 🛠️ Methodology
 This project uses a client-server architecture to provide real-time VoIP monitoring and analysis.
+
+<img width="639" height="468" alt="image" src="https://github.com/user-attachments/assets/acc256ab-75c5-4da0-aeee-d93420ade902" />
+
+<img width="753" height="661" alt="image" src="https://github.com/user-attachments/assets/950604a1-5a28-451b-81f6-1c1f2b361845" />
+
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/KpXyWT5ew29f7q9EI5iPge/Mermaid-in-Figma--Community-?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+
 ## 🚀 Tech Stack
 
 | Component | Technology                                       |
