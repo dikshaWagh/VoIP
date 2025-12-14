@@ -16,34 +16,15 @@
 -   **Modern Web UI:** A sleek and responsive interface built with React and Vite. 💻
 
 ## 🛠️ Methodology
-
 This project uses a client-server architecture to provide real-time VoIP monitoring and analysis.
-
-### 🐍 Backend 
-
-1.  **Packet Sniffing:** A high-performance Python sniffer, built with Scapy, continuously captures network traffic. It's laser-focused on VoIP protocols, primarily **SIP** (for call signaling) and **RTP** (for the actual voice data).
-2.  **Data Extraction & Analysis:** As packets are captured, the backend service intelligently parses them:
-    -   **SIP packets** are decoded to understand the call flow: who is calling whom, when the call is ringing, when it's answered, and when it ends.
-    -   **RTP packets** are analyzed to calculate critical Quality of Service (QoS) metrics like jitter and packet loss, which are essential for diagnosing call quality issues.
-3.  **Data Storage:** All this valuable information is persisted in a database, creating a historical log of every call for later analysis and review.
-4.  **API Layer:** A robust **FastAPI** server exposes the data through a RESTful API, making it available for the frontend to consume.
-
-### ⚛️ Frontend 
-
-1.  **Data Visualization:** A modern single-page application (SPA) built with **React** serves as the user's dashboard.
-2.  **Real-time Updates:** The frontend communicates with the backend API to fetch and display data, providing:
-    -   A live feed of ongoing calls.
-    -   Searchable and filterable call logs.
-    -   Interactive diagrams that visualize the SIP message flow for each call.
-    -   Clean charts and graphs to represent call quality metrics over time.
-
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/KpXyWT5ew29f7q9EI5iPge/Mermaid-in-Figma--Community-?node-id=0-1&embed-host=share" allowfullscreen></iframe>
 ## 🚀 Tech Stack
 
 | Component | Technology                                       |
 | :-------- | :----------------------------------------------- |
 | **Backend** | 🐍 Python, FastAPI, Scapy, SQLAlchemy            |
 | **Frontend**| ⚛️ React, Vite, Chart.js, Axios                  |
-| **Database**| 🗄️ SQLite (or your favorite relational database) |
+| **Database**| 🗄️ SQLite                                        |
 
 ## 🏁 Getting Started
 
